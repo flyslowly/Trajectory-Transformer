@@ -1,4 +1,3 @@
-Pytorch > 1.0
 Numpy
 Scipy
 Pandas
