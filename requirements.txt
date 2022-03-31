@@ -1,0 +1,6 @@
+Pytorch > 1.0
+Numpy
+Scipy
+Pandas
+Tensorboard
+kmeans_pytorch
