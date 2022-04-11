@@ -239,35 +239,5 @@ def main():
         print("fad: %6.3f" % fad_samp)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 if __name__=='__main__':
     main()
