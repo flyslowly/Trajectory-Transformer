@@ -54,11 +54,11 @@ def main():
     except:
         pass
     try:
-        os.mkdir(f'output/QuantizedTF')
+        os.mkdir('output/QuantizedTF')
     except:
         pass
     try:
-        os.mkdir('models/QuantizedTF')
+        os.mkdir(f'models/QuantizedTF')
     except:
         pass
 
