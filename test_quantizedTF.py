@@ -22,6 +22,7 @@ import quantized_TF
 
 
 def main():
+    print("tag ##################")
     parser=argparse.ArgumentParser(description='Train the individual Transformer model')
     parser.add_argument('--dataset_folder',type=str,default='datasets')
     parser.add_argument('--dataset_name',type=str,default='zara1')
