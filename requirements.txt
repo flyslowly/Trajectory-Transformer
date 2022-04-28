@@ -2,4 +2,3 @@ Numpy
 Scipy
 Pandas
 Tensorboard
-kmeans_pytorch
