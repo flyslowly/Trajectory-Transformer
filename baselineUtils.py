@@ -49,7 +49,7 @@ def create_dataset(dataset_folder,dataset_name,val_size,gt,horizon,delim="\t",tr
 
             raw_data.sort_values(by=['frame','ped'], inplace=True)
 
-            inp,out,info=get_strided_data_clust(raw_data,gt,horizon,30) #Changed step from 1 to 30 ti fit PIE
+            inp,out,info=get_strided_data_clust(raw_data,gt,horizon,7) #Changed step from 1 to 7 to fit PIE
 
             dt_frames=info['frames']
             dt_seq_start=info['seq_start']
