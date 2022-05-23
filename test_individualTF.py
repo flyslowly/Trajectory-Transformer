@@ -109,7 +109,7 @@ def main():
 
     scipy.io.savemat(f'models/Individual/{args.name}/norm.mat',{'mean':mean.cpu().numpy(),'std':std.cpu().numpy()})
 
-    for epoch in range(0, int(args.epoch)):
+    for epoch in range(0, int(args.epoch)-1):
         model=individual_TF.IndividualTF(2, 3, 3, N=args.layers,
                        d_model=args.emb_size, d_ff=2048, h=args.heads, dropout=args.dropout,mean=[0,0],std=[0,0]).to(device)
         model.load_state_dict(torch.load(f'models/Individual/{args.name}/{str(epoch).zfill(5)}.pth'))
