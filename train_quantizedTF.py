@@ -102,6 +102,7 @@ def main():
 
     mat = scipy.io.loadmat(os.path.join(args.dataset_folder, args.dataset_name, "clusters.mat"))
     clusters=mat['centroids']
+    print(clusters.shape[0])
 
     import quantized_TF
     model=quantized_TF.QuantizedTF(clusters.shape[0], clusters.shape[0]+1, clusters.shape[0], N=args.layers,
