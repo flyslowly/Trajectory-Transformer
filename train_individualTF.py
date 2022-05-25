@@ -108,6 +108,7 @@ def main():
     import individual_TF
     model=individual_TF.IndividualTF(2, 3, 3, N=args.layers,
                    d_model=args.emb_size, d_ff=2048, h=args.heads, dropout=args.dropout,mean=[0,0],std=[0,0]).to(device)
+    print(model)
     if args.resume_train:
         model.load_state_dict(torch.load(f'models/Individual/{args.name}/{args.model_pth}'))
 
