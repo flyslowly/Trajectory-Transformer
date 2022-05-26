@@ -14,8 +14,6 @@ import scipy.io
 import json
 import pickle
 
-from torchinfo import summary
-
 from torch.utils.tensorboard import SummaryWriter
 
 
@@ -110,7 +108,6 @@ def main():
     import individual_TF
     model=individual_TF.IndividualTF(2, 3, 3, N=args.layers,
                    d_model=args.emb_size, d_ff=2048, h=args.heads, dropout=args.dropout,mean=[0,0],std=[0,0]).to(device)
-    summary(model)
     if args.resume_train:
         model.load_state_dict(torch.load(f'models/Individual/{args.name}/{args.model_pth}'))
 
@@ -160,6 +157,12 @@ def main():
 
             src_att = torch.ones((inp.shape[0], 1,inp.shape[1])).to(device)
             trg_att=subsequent_mask(dec_inp.shape[1]).repeat(dec_inp.shape[0],1,1).to(device)
+
+            print("###########################")
+            print("input")
+            print(inp)
+            print("decoder input")
+            print(dec_inp)
 
 
 
