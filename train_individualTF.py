@@ -142,7 +142,9 @@ def main():
 
     while epoch<args.max_epoch:
         epoch_loss=0
+        print("Start training.......")
         model.train()
+        print("Finish training.......")
 
         for id_b,batch in enumerate(tr_dl):
 
