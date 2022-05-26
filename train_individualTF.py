@@ -159,6 +159,13 @@ def main():
             trg_att=subsequent_mask(dec_inp.shape[1]).repeat(dec_inp.shape[0],1,1).to(device)
 
 
+            print("###########################")
+            print("input")
+            print(inp)
+            print("decoder input")
+            print(dec_inp)
+
+
 
 
             pred=model(inp, dec_inp, src_att, trg_att)
